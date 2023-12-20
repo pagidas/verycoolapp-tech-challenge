@@ -1,21 +1,26 @@
-## Micronaut 4.2.2 Documentation
+# vercoolapp-tech-challenge
 
-- [User Guide](https://docs.micronaut.io/4.2.2/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.2.2/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.2.2/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+## Contents
+- [Task](#task)
+  - [Questions](#questions)
 
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature serialization-jackson documentation
+## Task
 
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
+>_As a user I want to be able to view a list of ideas on VeryCool_
+> 
+>_https://verycoolapp.com/_
+> 
+>_Build a `REST` / `GraphQL` API to list the ideas_
 
+>_As a user I want to be able to add a new Idea_
+> 
+>_Build a REST / GraphQL API to add a new idea_
 
-## Feature micronaut-aot documentation
+### Questions
 
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
+>1. _What technologies would you choose?_
+>2. _What database(s) would you choose?_
+>3. _What considerations would you make when building the API?_
+>4. _How would you handle security of the API?_
+>5. _Write the Slack message you would send to the frontend developer explaining how to use the API_
 
