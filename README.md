@@ -3,6 +3,7 @@
 ## Contents
 - [Task](#task)
   - [Questions](#questions)
+  - [Answers](#answers)
 
 ## Task
 
@@ -18,9 +19,18 @@
 
 ### Questions
 
->1. _What technologies would you choose?_
+>1. [_What technologies would you choose?_](#what-technologies-would-you-choose)
 >2. _What database(s) would you choose?_
 >3. _What considerations would you make when building the API?_
 >4. _How would you handle security of the API?_
 >5. _Write the Slack message you would send to the frontend developer explaining how to use the API_
 
+### Answers
+
+#### What technologies would you choose?
+
+**_Application Framework_**
+
+For the **_main application framework_** we've chosen to use `Micronaut`. Similar to `SpringBoot` it offers a plethora
+of libraries to handle `HTTP` and reads/writes to many well-known `SQL` and `NoSQL` data storages. Also, since we're
+asked to secure the API, it also offers some middle layer to delegate the logic.
