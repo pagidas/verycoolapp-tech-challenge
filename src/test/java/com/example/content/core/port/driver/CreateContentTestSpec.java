@@ -11,7 +11,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-interface CreateContentTestSpec {
+public interface CreateContentTestSpec {
 
     CreateContent createContent();
     ViewAllContent viewAllContent();
@@ -21,7 +21,7 @@ interface CreateContentTestSpec {
         var givenUser = new UserId(UUID.randomUUID());
         var request = new CreateContentRequest(
                 givenUser,
-                "jpg",
+                "image/jpg",
                 new ContentTitle("photo"),
                 new byte[] {}
         );
@@ -31,7 +31,7 @@ interface CreateContentTestSpec {
         var result = viewAllContent().invoke(givenUser);
         assertNotEquals(Collections.emptyList(), result);
         var created = result.getFirst();
-        assertEquals("jpg", created.type());
+        assertEquals("image/jpg", created.type());
     }
 
 }

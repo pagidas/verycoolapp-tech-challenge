@@ -1,10 +1,15 @@
-package com.example.content.core.port.driven;
+package com.example.content.adapter.in_memory;
 
 import com.example.content.core.domain.micro_types.UserId;
+import com.example.content.core.port.driven.ContentRepository;
 import com.example.content.core.port.driven.model.ContentEntity;
 
 import java.util.*;
 
+/**
+ * This is supposed to be used for testing purposes, but we moved in production code
+ * so that we can run the application without real database interactions.
+ */
 public class InMemoryContentRepository implements ContentRepository {
 
     private final HashMap<UserId, List<ContentEntity>> store;
