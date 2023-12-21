@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ContentRepository {
     List<ContentEntity> getContent(UserId userId);
+    void saveContent(ContentEntity content);
 }

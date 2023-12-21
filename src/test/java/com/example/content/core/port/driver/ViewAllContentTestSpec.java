@@ -1,10 +1,8 @@
 package com.example.content.core.port.driver;
 
-import com.example.content.core.domain.micro_types.ContentId;
 import com.example.content.core.domain.micro_types.ContentTitle;
 import com.example.content.core.domain.micro_types.UserId;
-import com.example.content.core.port.driven.SaveContent;
-import com.example.content.core.port.driven.model.ContentEntity;
+import com.example.content.core.port.driver.model.CreateContentRequest;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
@@ -17,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public interface ViewAllContentTestSpec {
 
     ViewAllContent viewAllContent();
-    SaveContent saveContent();
+    CreateContent createContent();
 
     @Test
     default void can_view_no_content_if_none_exist_for_user() {
@@ -29,24 +27,26 @@ public interface ViewAllContentTestSpec {
     default void can_view_contents_for_a_user() {
         var givenUser = new UserId(UUID.randomUUID());
         List.of(
-                new ContentEntity(new ContentId(UUID.randomUUID()),
+                new CreateContentRequest(
                         givenUser,
                         "type",
                         new ContentTitle("title-1"),
-                        "some-url"),
-                new ContentEntity(new ContentId(UUID.randomUUID()),
+                        new byte[] {}
+                ),
+                new CreateContentRequest(
                         givenUser,
                         "type",
                         new ContentTitle("title-2"),
-                        "some-url")
+                        new byte[] {}
+                )
         ).forEach(save());
 
         var result = viewAllContent().invoke(givenUser);
         assertEquals(2, result.size());
     }
 
-    default Consumer<ContentEntity> save() {
-        return entity -> saveContent().invoke(entity);
+    default Consumer<CreateContentRequest> save() {
+        return r -> createContent().invoke(r);
     }
 
 }

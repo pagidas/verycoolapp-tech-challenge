@@ -5,7 +5,7 @@ import com.example.content.core.port.driven.model.ContentEntity;
 
 import java.util.*;
 
-public class InMemoryContentRepository implements ContentRepository, SaveContent {
+public class InMemoryContentRepository implements ContentRepository {
 
     private final HashMap<UserId, List<ContentEntity>> store;
 
@@ -20,7 +20,7 @@ public class InMemoryContentRepository implements ContentRepository, SaveContent
     }
 
     @Override
-    public void invoke(ContentEntity content) {
+    public void saveContent(ContentEntity content) {
         var found = store.get(content.userId());
         if (found != null) {
             var newList = copy(found, content);
