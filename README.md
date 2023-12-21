@@ -1,4 +1,4 @@
-# vercoolapp-tech-challenge
+# verycoolapp-tech-challenge
 
 ## Contents
 - [Task](#task)
