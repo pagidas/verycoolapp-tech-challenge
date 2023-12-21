@@ -1,5 +1,6 @@
 package com.example.content.core.port.driver;
 
+import com.example.content.core.domain.micro_types.ContentId;
 import com.example.content.core.domain.micro_types.ContentTitle;
 import com.example.content.core.domain.micro_types.UserId;
 import com.example.content.core.port.driven.SaveContent;
@@ -28,8 +29,16 @@ public interface ViewAllContentTestSpec {
     default void can_view_contents_for_a_user() {
         var givenUser = new UserId(UUID.randomUUID());
         List.of(
-                new ContentEntity(givenUser, "type", new ContentTitle("title-1"), "some-url"),
-                new ContentEntity(givenUser, "type", new ContentTitle("title-2"), "some-url")
+                new ContentEntity(new ContentId(UUID.randomUUID()),
+                        givenUser,
+                        "type",
+                        new ContentTitle("title-1"),
+                        "some-url"),
+                new ContentEntity(new ContentId(UUID.randomUUID()),
+                        givenUser,
+                        "type",
+                        new ContentTitle("title-2"),
+                        "some-url")
         ).forEach(save());
 
         var result = viewAllContent().invoke(givenUser);

@@ -1,6 +1,5 @@
 package com.example.content.core.port.driver;
 
-import com.example.content.core.domain.micro_types.ContentTitle;
 import com.example.content.core.domain.micro_types.UserId;
 import com.example.content.core.port.driven.ContentRepository;
 import com.example.content.core.port.driven.model.ContentEntity;
@@ -27,5 +26,5 @@ public class ViewAllContentLogic implements ViewAllContent {
     }
 
     private static final Function<ContentEntity, ViewContent> toView =
-            entity -> new ViewContent(entity.title(), entity.type(), entity.url());
+            entity -> new ViewContent(entity.id(), entity.title(), entity.type(), entity.url());
 }
