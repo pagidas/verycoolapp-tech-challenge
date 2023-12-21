@@ -18,7 +18,7 @@ public class CreateContentViaHttpTest implements CreateContentTestSpec {
 
     @Inject
     public CreateContentViaHttpTest(
-            @Named("CreateContentHttpClient") CreateContent createContent,
+            @Named("ContentApiTestHttpClient") CreateContent createContent,
             ContentRepository contentRepository
     ) {
         this.createContent = createContent;

@@ -16,7 +16,7 @@ public class ViewAllContentViaHttpTest implements ViewAllContentTestSpec {
     private final ViewAllContent viewAllContent;
 
     public ViewAllContentViaHttpTest(
-            @Named("ViewAllContentHttpClient") ViewAllContent viewAllContent,
+            @Named("ContentApiTestHttpClient") ViewAllContent viewAllContent,
             ContentRepository contentRepository
     ) {
         this.viewAllContent = viewAllContent;
