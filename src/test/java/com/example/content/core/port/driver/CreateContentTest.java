@@ -1,6 +1,7 @@
 package com.example.content.core.port.driver;
 
 import com.example.content.adapter.in_memory.InMemoryContentRepository;
+import com.example.content.core.port.driver.spec.CreateContentTestSpec;
 
 public class CreateContentTest implements CreateContentTestSpec {
 

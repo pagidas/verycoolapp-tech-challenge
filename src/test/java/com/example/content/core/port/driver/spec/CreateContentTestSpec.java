@@ -1,7 +1,9 @@
-package com.example.content.core.port.driver;
+package com.example.content.core.port.driver.spec;
 
 import com.example.content.core.domain.micro_types.ContentTitle;
 import com.example.content.core.domain.micro_types.UserId;
+import com.example.content.core.port.driver.CreateContent;
+import com.example.content.core.port.driver.ViewAllContent;
 import com.example.content.core.port.driver.model.CreateContentRequest;
 import org.junit.jupiter.api.Test;
 

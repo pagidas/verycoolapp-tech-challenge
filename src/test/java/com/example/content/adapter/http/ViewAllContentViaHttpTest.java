@@ -5,7 +5,7 @@ import com.example.content.core.port.driven.ContentRepository;
 import com.example.content.core.port.driver.CreateContent;
 import com.example.content.core.port.driver.CreateContentLogic;
 import com.example.content.core.port.driver.ViewAllContent;
-import com.example.content.core.port.driver.ViewAllContentTestSpec;
+import com.example.content.core.port.driver.spec.ViewAllContentTestSpec;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Named;
 
