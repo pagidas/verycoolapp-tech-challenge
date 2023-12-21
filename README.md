@@ -34,3 +34,7 @@
 For the **_main application framework_** we've chosen to use `Micronaut`. Similar to `SpringBoot` it offers a plethora
 of libraries to handle `HTTP` and reads/writes to many well-known `SQL` and `NoSQL` data storages. Also, since we're
 asked to secure the API, it also offers some middle layer to delegate the logic.
+
+**_Http Adapter_**
+
+For adapting the API operations to `HTTP` we used `Micronaut`'s modules regarding http. 
