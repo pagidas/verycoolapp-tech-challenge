@@ -41,8 +41,8 @@ For adapting the API operations to `HTTP` we used `Micronaut`'s modules regardin
 ---
 
 #### What database(s) would you choose?
-I would start using a `NoSQL` database to be able to understand the domain model iteratively. Since it doesn't seem to
-be a good option to upload files in neither `SQL` nor `NoSQL` databases, but rather somewhere else in a `bucket`, I
+We would start using a `NoSQL` database to be able to understand the domain model iteratively. Since it doesn't seem to
+be a good option to upload files in neither `SQL` nor `NoSQL` databases, but rather somewhere else in a `bucket`, we
 would focus on keeping the `url` where user's content has been uploaded, along with the relationships the data models
 form.
 
