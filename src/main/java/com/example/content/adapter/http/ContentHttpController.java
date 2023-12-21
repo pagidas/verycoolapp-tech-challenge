@@ -1,6 +1,5 @@
 package com.example.content.adapter.http;
 
-import com.example.content.core.domain.micro_types.ContentId;
 import com.example.content.core.domain.micro_types.ContentTitle;
 import com.example.content.core.domain.micro_types.UserId;
 import com.example.content.core.port.driver.CreateContent;
@@ -14,14 +13,10 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.multipart.CompletedFileUpload;
-import io.micronaut.serde.annotation.SerdeImport;
 
 import java.util.List;
 
 @Controller("/content")
-@SerdeImport(ViewContent.class)
-@SerdeImport(ContentId.class)
-@SerdeImport(ContentTitle.class)
 public class ContentHttpController {
 
     private final CreateContent createContent;
