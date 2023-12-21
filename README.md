@@ -59,4 +59,10 @@ content --> domain
 ├── project --> domain (todo)
 └── config --> infrastructure (how the application is built)
 ```
+We've used this sort of project structure to improve project navigation, and separation of concerns. Though it's nowhere
+near "perfect" at least it visualizes the backbone on how we should think when structuring a software project.
 
+High-level architecture is deeply impacted by the low-level cohesion of modules and their dependencies.
+
+To take the above structure one step further, we would encourage to modify the high-level packages into distinct `Gradle`
+projects/modules to enforce a better dependency management and isolation.
